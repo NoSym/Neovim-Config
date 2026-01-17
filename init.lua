@@ -87,13 +87,28 @@ end, { desc = 'Print the git blame for the current line' })
 -- 'updatetime' and when going to insert mode
 vim.cmd('packadd! nohlsearch')
 
+-- Lua LSP
+vim.lsp.enable({
+	'lua_ls', -- lua
+  'ts_ls' --typescript
+})
+
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
+-- Telescope Dependencies
+Plug 'nvim-lua/plenary.nvim' -- required
+Plug('nvim-telescope/telescope-fzf-native.nvim', { build = 'make' }) -- sorting performance
+Plug 'BurntSushi/ripgrep' -- buildin.live_grep
+Plug 'sharkdp/fd' -- finder
+
+Plug('nvim-telescope/telescope.nvim', { tag = '*' })
 Plug 'sheerun/vim-polyglot'
-Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/everforest'
 
 vim.call('plug#end')
 
-vim.cmd.colorscheme('onedark')
+vim.cmd.colorscheme('everforest')
+
+require('configs/telescope')
