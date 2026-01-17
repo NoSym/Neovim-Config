@@ -93,22 +93,7 @@ vim.lsp.enable({
   'ts_ls' --typescript
 })
 
-local Plug = vim.fn['plug#']
-
-vim.call('plug#begin')
-
--- Telescope Dependencies
-Plug 'nvim-lua/plenary.nvim' -- required
-Plug('nvim-telescope/telescope-fzf-native.nvim', { build = 'make' }) -- sorting performance
-Plug 'BurntSushi/ripgrep' -- buildin.live_grep
-Plug 'sharkdp/fd' -- finder
-
-Plug('nvim-telescope/telescope.nvim', { tag = '*' })
-Plug 'sheerun/vim-polyglot'
-Plug 'sainnhe/everforest'
-
-vim.call('plug#end')
+-- Package Manager
+require('plug')
 
 vim.cmd.colorscheme('everforest')
-
-require('configs/telescope')
