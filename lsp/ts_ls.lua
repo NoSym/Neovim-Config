@@ -2,13 +2,13 @@ return {
   -- Command and arguments to start the server.
   cmd = { 'vtsls', '--stdio' },
   -- Filetypes to automatically attach to.
-  filetypes = { 
-	'javascript', 
-	'javascriptreact', 
-	'javascript.jsx', 
+  filetypes = {
+	'javascript',
+	'javascriptreact',
+	'javascript.jsx',
 	'typescript',
 	'typescriptreact',
-	'typescript.tsx' 
+	'typescript.tsx'
   },
   -- Sets the "workspace" to the directory where any of these files is found.
   -- Files that share a root directory will reuse the LSP server connection.
