@@ -11,10 +11,9 @@ Plug 'BurntSushi/ripgrep' -- buildin.live_grep
 Plug 'sharkdp/fd' -- finder
 
 Plug('nvim-telescope/telescope.nvim', { tag = '*' })
-Plug 'sheerun/vim-polyglot'
 Plug 'sainnhe/everforest'
 
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive' -- git
 
 vim.call('plug#end')
 
