@@ -14,5 +14,7 @@ Plug('nvim-telescope/telescope.nvim', { tag = '*' })
 Plug 'sheerun/vim-polyglot'
 Plug 'sainnhe/everforest'
 
+Plug 'tpope/vim-fugitive'
+
 vim.call('plug#end')
 
