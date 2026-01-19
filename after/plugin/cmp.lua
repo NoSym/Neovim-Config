@@ -75,9 +75,15 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- todo: ignore vim global warning
 vim.lsp.config('lua_ls', {
-	capabilities = capabilities
+	capabilities = capabilities,
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { 'vim' }
+			}
+		}
+	}
 })
 
 vim.lsp.config('vtsls', {
