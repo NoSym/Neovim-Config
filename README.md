@@ -7,7 +7,10 @@
 - RipGrep `scoop install ripgrep`
 - Finder `scoop install fd`
 
-# Tree Sitter
+# Install Tree Sitter
 - CLI `npm i -g tree-sitter-cli`
 - install `C++ Clang tools for Windows` and `Windows 11 SDK` via visual studio installer
   - make sure `clang` is available in PATH
+
+# Install Packages w/ Plug
+- `:PlugInstall`
