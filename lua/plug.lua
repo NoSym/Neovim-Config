@@ -15,5 +15,18 @@ Plug 'sainnhe/everforest'
 
 Plug 'tpope/vim-fugitive' -- git
 
-vim.call('plug#end')
+Plug 'ray-x/lsp_signature.nvim' -- function signature preview
 
+-- CMP (Autocomplete)
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+-- Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+-- CMP VSNIP (do i have this set up correctly?)
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
+vim.call('plug#end')

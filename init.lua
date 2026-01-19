@@ -91,12 +91,6 @@ end, { desc = 'Print the git blame for the current line' })
 -- 'updatetime' and when going to insert mode
 vim.cmd('packadd! nohlsearch')
 
--- Language Servers
-vim.lsp.enable({
-	'lua_ls', -- lua
-	'ts_ls'  --typescript
-})
-
 -- Package Manager
 require('plug')
 
