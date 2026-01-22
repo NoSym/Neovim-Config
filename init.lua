@@ -91,7 +91,16 @@ end, { desc = 'Print the git blame for the current line' })
 -- 'updatetime' and when going to insert mode
 vim.cmd('packadd! nohlsearch')
 
+-- Inline Diagnostics
+vim.diagnostic.config({
+	virtual_text = {
+		prefix = '',
+		severity = {
+			vim.diagnostic.severity.WARN,
+			vim.diagnostic.severity.ERROR
+		}
+	}
+})
+
 -- Package Manager
 require('plug')
-
-vim.cmd.colorscheme('everforest')

@@ -86,6 +86,7 @@ vim.lsp.config('lua_ls', {
 	}
 })
 
+-- todo: prune
 vim.lsp.config('vtsls', {
 	capabilities = capabilities,
 	settings = {
