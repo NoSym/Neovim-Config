@@ -86,40 +86,28 @@ vim.lsp.config('lua_ls', {
 	}
 })
 
--- todo: prune
+local vtslsLangSettings = {
+	inlayHints = {
+		enumMemberValues = {
+			enabled = true -- implicit enum typing, typescript only
+		},
+		parameterNames = {
+			enabled = 'all'
+		},
+		functionLikeReturnTypes = {
+			enabled = true
+		}
+	},
+	suggest = {
+		completeFunctionCalls = true
+	}
+}
+
 vim.lsp.config('vtsls', {
 	capabilities = capabilities,
 	settings = {
-		javascript = {
-			suggest = {
-				completeFunctionCalls = true
-			}
-		},
-		typescript = {
-			inlayHints = {
-				enumMemberValues = {
-					enabled = true
-				},
-				parameterNames = {
-					enabled = 'all'
-				},
-				parameterTypes = {
-					enabled = true
-				},
-				functionLikeReturnTypes = {
-					enabled = true
-				},
-				propertyDeclarationTypes = {
-					enabled = true
-				},
-				variableTypes = {
-					enabled = true
-				}
-			},
-			suggest = {
-				completeFunctionCalls = true
-			}
-		}
+		javascript = vtslsLangSettings,
+		typescript = vtslsLangSettings
 	}
 })
 
