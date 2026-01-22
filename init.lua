@@ -93,6 +93,9 @@ vim.cmd('packadd! nohlsearch')
 
 -- Inline Diagnostics
 vim.diagnostic.config({
+	float = {
+		suffix = ''
+	},
 	virtual_text = {
 		prefix = '',
 		severity = {
